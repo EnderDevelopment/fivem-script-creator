@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shadow City | Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene" aria-hidden="true">
+        <div class="skyline skyline-back"></div>
+        <div class="skyline skyline-front"></div>
+        <div class="rain rain-one"></div>
+        <div class="rain rain-two"></div>
+        <div class="road-glow"></div>
+        <div class="car-lights lights-left"></div>
+        <div class="car-lights lights-right"></div>
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+    </div>
+
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand-mark" aria-label="Shadow City logo">
+                <span class="brand-icon">SC</span>
+                <span class="brand-name">SHADOW <b>CITY</b></span>
+            </div>
+            <div class="status"><span class="status-dot"></span> CITY SERVICES ONLINE</div>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">ROLEPLAY <span>•</span> COMMUNITY <span>•</span> REALISTIC LIFE</p>
+            <h1>YOUR STORY.<br><em>YOUR CITY.</em><br>YOUR DESTINY.</h1>
+            <p class="intro">A living city shaped by the choices you make. Find your place in Shadow City.</p>
+        </section>
+
+        <section class="loading-card" aria-live="polite">
+            <div class="loading-head">
+                <span id="loading-label">CONNECTING TO THE CITY</span>
+                <strong id="progress-text">0%</strong>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="loading-meta"><span id="tip-text">Tip: Every decision has a consequence.</span><span id="server-text">SHADOW-CITY RP / EU</span></div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://discord.gg/your-server" target="_blank" rel="noreferrer">DISCORD <span>↗</span></a>
+                <button type="button" data-panel="team">TEAM</button>
+                <button type="button" data-panel="rules">RULES</button>
+                <a href="https://instagram.com/your-server" target="_blank" rel="noreferrer">SOCIAL <span>↗</span></a>
+            </div>
+            <div class="music-player">
+                <button id="music-toggle" class="music-button" type="button" aria-label="Toggle music">Ⅱ</button>
+                <div class="music-info"><span>NOW PLAYING</span><strong id="track-title">MIDNIGHT DRIVE</strong></div>
+                <input id="volume" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Music volume">
+                <button id="next-track" class="next-button" type="button" aria-label="Next track">↠</button>
+            </div>
+        </footer>
+    </main>
+
+    <div class="panel-overlay" id="panel-overlay" hidden>
+        <section class="info-panel" role="dialog" aria-modal="true">
+            <button class="close-panel" id="close-panel" type="button" aria-label="Close">×</button>
+            <p class="eyebrow" id="panel-kicker">SHADOW CITY</p>
+            <h2 id="panel-title">WELCOME</h2>
+            <div id="panel-content"></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
